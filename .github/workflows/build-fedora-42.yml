@@ -1,0 +1,19 @@
+name: Build Image using Containerfile
+on: [push]
+
+jobs:
+  build:
+    name: Build image
+    runs-on: ubuntu-latest
+
+    permissions:
+      packages: write
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: ./.github/workflows/build-container
+      name: 'Build image with Buildah'
+      with:
+        registry-password: ${{ secrets.GITHUB_TOKEN }}
+        fedora-version: '42'
+        commit-sha: ${{ github.sha }}
