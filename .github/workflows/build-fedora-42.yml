@@ -1,5 +1,13 @@
 name: Build Image using Containerfile
-on: [push]
+on:
+  push:
+    branches:
+      - 'main' 
+      - 'releases/**'
+    paths:
+      - 'Containerfile'
+      - '.github/workflows/**'
+
 
 jobs:
   build:
