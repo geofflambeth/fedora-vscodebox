@@ -2,9 +2,20 @@
 
 Simple [Toolbx](https://containertoolbx.org) image for easy use of [Visual Studio Code](https://code.visualstudio.com/).
 
-```sh
-toolbox create --image ghcr.io/geofflambeth/fedora-vscodebox:latest
-toolbox enter fedora-vscodebox-latest
+## Quickstart
+
+```bashsh
+toolbox create --image ghcr.io/geofflambeth/fedora-vscodebox:fedora-42
+toolbox enter fedora-vscodebox-fedora-42
+```
+
+## Alias
+
+If you want to use zsh by default with this toolbox, but don't want to install zsh and set it as default on your host machine, consider adding an alias with the `SHELL` env var.
+
+```bash
+# consider adding to .bashrc on the host
+alias vscodebox='SHELL=zsh toolbox enter fedora-vscodebox-fedora-42'
 ```
 
 ## Included in the container
