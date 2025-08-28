@@ -7,3 +7,5 @@ RUN echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft
 RUN dnf --assumeyes update
 RUN dnf --assumeyes install code neovim zsh
 RUN dnf clean all
+
+LABEL org.opencontainers.image.source=https://github.com/geofflambeth/fedora-vscodebox
