@@ -24,7 +24,7 @@ runs:
     uses: redhat-actions/buildah-build@v2
     with:
       image: fedora-vscodebox
-      tags: latest ${{ inputs.commit-sha }}
+      tags: latest fedora-${{ inputs.fedora-version }} ${{ inputs.commit-sha }}
       containerfiles: |
         ./Containerfile
       build-args: |
