@@ -26,6 +26,22 @@ jobs:
         fedora-version: 'latest'
         commit-sha: ${{ github.sha }}
 
+  build-43:
+    name: Build fedora:43 image
+    runs-on: ubuntu-latest
+
+    permissions:
+      packages: write
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: ./.github/workflows/build-container
+      name: 'Build image with Buildah'
+      with:
+        registry-password: ${{ secrets.GITHUB_TOKEN }}
+        fedora-version: '43'
+        commit-sha: ${{ github.sha }}
+
   build-42:
     name: Build fedora:42 image
     runs-on: ubuntu-latest
