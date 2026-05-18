@@ -23,5 +23,7 @@ alias vscodebox='SHELL=zsh toolbox enter fedora-vscodebox-fedora-42'
 The images here are generally intended for my personal use in a Visual Studio Code&ndash;based workflow. The stack here may change, but I will clearly document breaking changes. 
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [zsh](https://www.zsh.org/)
+- [git-cliff](https://git-cliff.org/)
 - [neovim](https://neovim.io/)
+- [tmux](https://github.com/tmux/tmux/)
+- [zsh](https://www.zsh.org/)
