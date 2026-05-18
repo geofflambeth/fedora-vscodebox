@@ -5,8 +5,8 @@ Simple [Toolbx](https://containertoolbx.org) image for easy use of [Visual Studi
 ## Quickstart
 
 ```bashsh
-toolbox create --image ghcr.io/geofflambeth/fedora-vscodebox:fedora-42
-toolbox enter fedora-vscodebox-fedora-42
+toolbox create --image ghcr.io/geofflambeth/fedora-vscodebox:latest
+toolbox enter fedora-vscodebox-latest
 ```
 
 ## Alias
@@ -15,7 +15,7 @@ If you want to use zsh by default with this toolbox, but don't want to install z
 
 ```bash
 # consider adding to .bashrc on the host
-alias vscodebox='SHELL=zsh toolbox enter fedora-vscodebox-fedora-42'
+alias vscodebox='SHELL=zsh toolbox enter fedora-vscodebox-latest'
 ```
 
 ## Included in the container
