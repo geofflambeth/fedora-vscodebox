@@ -6,7 +6,12 @@ RUN echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft
 COPY --link --from=ghcr.io/orhun/git-cliff/git-cliff	/usr/local/bin/git-cliff	/usr/local/bin/git-cliff
 
 RUN dnf --assumeyes update
-RUN dnf --assumeyes install code neovim zsh
+RUN dnf --assumeyes install \
+	code \
+	neovim \
+	tmux \
+	zsh
+
 RUN dnf clean all
 
 LABEL org.opencontainers.image.source=https://git.vsqd.xyz/geoffrey.lambeth/fedora-vscodebox
